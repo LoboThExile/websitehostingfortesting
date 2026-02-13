@@ -1,0 +1,62 @@
+<head>
+    <title>Be my valentine?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<style>
+    h1 {
+        font-family: "Playwrite AT";
+    }
+    button {
+        font-family: "SN Pro";
+    }
+    h2 {
+        font-family: "SN Pro";
+    }
+</style>
+
+<body>
+    <div align="center">        
+        <h1>Can you be my valentine?</h1>
+    </div>
+    <div align="center">
+        <h2 id="message"></h2>
+    </div>
+
+    <div align="center">
+        <button id="YesBtn" style="font-size: 20px;">Yes</button>
+        <button id="NoBtn" style="font-size: 20px;">No</button>
+    </div>
+
+    <script>
+        const nobutton = document.getElementById("NoBtn");
+        const yesbutton = document.getElementById("YesBtn");
+        const messagetext = document.getElementById("message")
+
+        const messages = [
+            "please press yes",
+            "add more here",
+            "well idk what else to add",
+            "budak bandar"
+        ]
+
+        const change_message = function() {
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            const message = messages[randomIndex];
+            messagetext.textContent = message
+        }
+
+        nobutton.onclick = function() {
+            let currentSize = parseInt(yesbutton.style.fontSize);
+            change_message();
+            yesbutton.style.fontSize = (currentSize * 1.2) + "px";
+        };
+
+        yesbutton.onclick = function() {
+            window.location.href = "yippe.html";
+        }
+
+
+    </script>
+</body>
