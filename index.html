@@ -1,76 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Niki's Website</title>
-    <meta content="A website for a special someone..." name="description">
-   <!--lobo coded this btw-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>wrong page</title>
+    <meta name="description" content="whoops ur on the wrong page!!">
+    <style>
+        h1, p, a {
+            font-family: "Sn Pro", sans-serif;
+        }
+    </style>
 </head>
-<style>
-    h1 {
-        font-family: "Playwrite AT";
-    }
-    button {
-        font-family: "SN Pro";
-    }
-    h2 {
-        font-family: "SN Pro";
-    }
-</style>
-
-<body style="
-    margin:0;
-    min-height:100vh;
-    background: linear-gradient(45deg, white, lightpink,lightpink, red);
-    background-attachment: fixed;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-">
-    <div align="center">        
-        <h1>Will you be my valentine?</h1>
+<body style="background: darkgray;">
+    <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <h1>wrong page!!</h1>
+        <hr style="width: 50%; border: 2px solid black; margin: 20px 0;">
+        <p>hi this is the main page, you might be on the wrong page.</p>
+        <p>so idk what ur doing here, BUT.. below are the pages hosted here.</p>
+        <ul>
+            <li><a href="/niki_valentine/main.html">niki's valentine page</a></li>
+        </ul>
     </div>
-    <div align="center">
-        <img src="https://c.tenor.com/SU5k1XOLwukAAAAd/tenor.gif" style="border: 2px solid black; border-radius: 30px; overflow: hidden;">
-    </div>
-
-    <div align="center" style="padding: 10px;">
-        <button id="YesBtn" style="font-size: 20px; background: linear-gradient(75deg, lime, limegreen);  border: none; font-size: 30px; border-radius: 10px;">Yes</button>
-        <button id="NoBtn" style="font-size: 20px; background: linear-gradient(75deg, red, orangered); border: none; font-size: 30px; border-radius: 10px;">No</button>
-    </div>
-
-    <script>
-        const nobutton = document.getElementById("NoBtn");
-        const yesbutton = document.getElementById("YesBtn");
-        const messagetext = document.getElementById("message")
-
-        const messages = [
-            "Are you sure?",
-            "Are you really sure?",
-            "Are you really really sure?",
-            "Pleaseee!!",
-            "I'll be really sad :(",
-            "alright not funny",
-            "PRESS YES!!!!",
-        ]
-
-        const change_message = function() {
-            const randomIndex = Math.floor(Math.random() * messages.length);
-            const message = messages[randomIndex];
-            NoBtn.textContent = message
-        }
-
-        nobutton.onclick = function() {
-            let currentSize = parseInt(yesbutton.style.fontSize);
-            change_message();
-            yesbutton.style.fontSize = (currentSize * 1.2) + "px";
-        };
-
-        yesbutton.onclick = function() {
-            window.location.href = "yippe.html";
-        }
-
-
-    </script>
 </body>
+</html>
