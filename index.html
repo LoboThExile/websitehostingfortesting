@@ -18,17 +18,26 @@
     }
 </style>
 
-<body>
+<body style="
+    margin:0;
+    min-height:100vh;
+    background: linear-gradient(45deg, white, lightpink,lightpink, red);
+    background-attachment: fixed;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+">
     <div align="center">        
         <h1>Will you be my valentine?</h1>
     </div>
     <div align="center">
-        <img src="https://c.tenor.com/SU5k1XOLwukAAAAd/tenor.gif">
+        <img src="https://c.tenor.com/SU5k1XOLwukAAAAd/tenor.gif" style="border: 2px solid black; border-radius: 30px; overflow: hidden;">
     </div>
 
-    <div align="center">
-        <button id="YesBtn" style="font-size: 20px;">Yes</button>
-        <button id="NoBtn" style="font-size: 20px;">No</button>
+    <div align="center" style="padding: 10px;">
+        <button id="YesBtn" style="font-size: 20px; background: linear-gradient(75deg, lime, limegreen);  border: none; font-size: 30px; border-radius: 10px;">Yes</button>
+        <button id="NoBtn" style="font-size: 20px; background: linear-gradient(75deg, red, orangered); border: none; font-size: 30px; border-radius: 10px;">No</button>
     </div>
 
     <script>
